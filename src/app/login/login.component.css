@@ -1,0 +1,74 @@
+#outer-wrapper{
+    margin: 0 auto;
+    padding: 3%;
+    margin-top: 10%;
+    width: 30%;   
+    background-color: #393E46;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    font-weight: 300;
+}
+#outer-wrapper:first-child{
+    font-size: 2rem;
+}
+form{
+    width: 80%;
+    
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 5%;
+}
+form div span:first-child{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #9AA0A6;
+}
+input{
+    outline: none;
+    background-color: #222831;
+    border: #191d24 1px solid;
+    border-radius: 2px;
+    color: #DADADC;
+    height: 30px;
+}
+input:focus{
+    border-color: #6F85D9;
+}
+div button{
+    height: 30px;
+    background-color: #00ADB5;
+    border: none;
+    color: #FDFDFF;
+    border-radius: 2px;
+    transition: ease-in-out 0.1s;
+}
+div button:hover{
+    background-color: #008086;
+}
+div button:active{
+    background-color: #00666b;
+}
+.little-blue{
+    width:fit-content ;
+    color: #00ADB5;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+form div #last-span{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #9AA0A6;
+}
+#register-section{
+    flex-direction: row;
+    margin-top: 1%;
+}

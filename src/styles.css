@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #222831;
+    font-family: "Roboto", sans-serif;
+}
+.thin-gray{
+    font-size:1rem;
+    color: #9AA0A6;
+}

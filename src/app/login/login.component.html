@@ -1,0 +1,24 @@
+<div id="outer-wrapper">
+    <span>Welcome Back!</span>
+    <span class="thin-gray">We're so excited to see you again!</span>
+    <form [formGroup]="loginForm">
+        <div>
+            <span>EMAIL</span>
+            <input formControlName="email">
+        </div>
+        <div>
+            <span>PASSWORD</span>
+            <input formArrayName="password">
+            <span class="little-blue">Forgot your password?</span>
+        </div>
+        
+        <div>
+            <button type="submit">Log In</button>
+            <div id="register-section">  
+                <span id="last-span">Need an account?</span>
+                <span class="little-blue">Register</span>
+            </div>
+            
+        </div>
+    </form>
+</div>
