@@ -9,3 +9,8 @@ html,body{
     font-size:1rem;
     color: #9AA0A6;
 }
+.thin-gray2{
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #9AA0A6;
+}

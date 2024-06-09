@@ -1,0 +1,43 @@
+<div id="outer-wrapper">
+  <span>Create an account!</span>
+  <span class="thin-gray"></span>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <span>EMAIL</span>
+      <input formControlName="email" id="email">
+      @if (registerForm.get("email")?.errors&&registerForm.get("email")?.dirty&&registerForm.get("email")?.touched){
+        <small class="text-danger">Please enter a valid email</small>
+      }
+    </div>
+    <div>
+      <span>Username</span>
+      <input formControlName="username" id="username">
+      @if (registerForm.get("username")?.errors&&registerForm.get("username")?.touched&&registerForm.get("username")?.dirty){
+        <small class="text-danger">Username should be at least 6 chars</small>
+      }
+    </div>
+    <div>
+      <span>PASSWORD</span>
+      <input formControlName="password">
+      @if (registerForm.get("password")?.errors&&registerForm.get("password")?.dirty&&registerForm.get("password")?.touched){
+        <small class="text-danger">Password should be at least 6 chars</small>
+      }
+      <div id="tickbox-container">
+        <input type="checkbox" formControlName="checkbox">
+        <span class="thin-gray2">I have read the Chatter's <a>Terms of Service and Privacy Policy</a></span>
+      </div>
+      <span class="little-blue">Forgot your password?</span>
+    </div>
+
+    <div>
+      <button [disabled]="registerForm.invalid" type="submit">Register</button>
+      <div id="register-section">
+        <span id="last-span">Already have an account?</span>
+        <span class="little-blue" [routerLink]="['/login']">Login</span>
+      </div>
+    </div>
+    @if (errorWhenRegistering){
+      <small class="text-danger">User already exists. Please log in</small>
+    }
+  </form>
+</div>

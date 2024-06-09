@@ -2,14 +2,14 @@
     margin: 0 auto;
     padding: 3%;
     margin-top: 10%;
-    width: 30%;   
+    width: 30%;
     background-color: #393E46;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     color: white;
     font-weight: 300;
 }
@@ -18,7 +18,7 @@
 }
 form{
     width: 80%;
-    
+
 }
 form div{
     display: flex;
@@ -56,6 +56,9 @@ div button:hover{
 div button:active{
     background-color: #00666b;
 }
+div button:disabled{
+    background-color: #DADADC;
+}
 .little-blue{
     width:fit-content ;
     color: #00ADB5;
@@ -71,4 +74,8 @@ form div #last-span{
 #register-section{
     flex-direction: row;
     margin-top: 1%;
+}
+.text-danger{
+  font-size: 0.7rem;
+  color: #FF3333;
 }

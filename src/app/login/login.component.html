@@ -1,24 +1,33 @@
 <div id="outer-wrapper">
     <span>Welcome Back!</span>
     <span class="thin-gray">We're so excited to see you again!</span>
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div>
             <span>EMAIL</span>
-            <input formControlName="email">
+            <input formControlName="email" id="email">
+          @if (loginForm.get("email")?.errors&&loginForm.get("email")?.dirty&&loginForm.get("email")?.touched){
+              <small class="text-danger">Please enter a valid email</small>
+          }
         </div>
         <div>
             <span>PASSWORD</span>
-            <input formArrayName="password">
+            <input formControlName="password">
+          @if (loginForm.get("password")?.errors&&loginForm.get("password")?.dirty&&loginForm.get("password")?.touched){
+            <small class="text-danger">Password should be at least 6 chars</small>
+          }
             <span class="little-blue">Forgot your password?</span>
         </div>
-        
+
         <div>
-            <button type="submit">Log In</button>
-            <div id="register-section">  
+            <button [disabled]="loginForm.invalid" type="submit">Log In</button>
+            <div id="register-section">
                 <span id="last-span">Need an account?</span>
-                <span class="little-blue">Register</span>
+                <span class="little-blue" [routerLink]="['/register']">Register</span>
             </div>
-            
+
         </div>
+      @if (errorWhenLogin){
+        <small class="text-danger">Email or password is wrong</small>
+      }
     </form>
 </div>
